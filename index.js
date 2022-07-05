@@ -5,4 +5,12 @@ const getCurrentTime = () => {
   return time;
 };
 
-console.log(getCurrentTime());
+const convertTimeToBinary = () => {
+  let times = getCurrentTime();
+  const binaryTimes = times
+    .split("")
+    .map((times) => (times >>> 0).toString(2).padStart(4, 0));
+  return binaryTimes;
+};
+
+convertTimeToBinary();
